@@ -1,0 +1,693 @@
+@charset "UTF-8";
+
+/*
+font-family: 'Modern Sans', sans-serif;
+font-family: lush, sans-serif;
+*/
+
+
+  
+ 
+/*ストロークアニメーション*/
+#mask .st0{
+    fill:none;
+    stroke:#fff;
+    stroke-width:90;/*線の太さを指定する*/
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1500; /* 線の間隔を指定する */
+    stroke-dashoffset:1500; /* 線の位置を指定する */
+}
+
+#mask{
+	width: 50%;
+	margin-bottom:-40px;
+}
+
+/*Loading*/
+#loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+	background: #F5F5F5;
+}
+
+#loading_box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+}
+
+.text_animation p {
+	color: #6180B2;
+	font-size: 20px;
+	padding-bottom: 2em;
+	letter-spacing: 3px;
+	width: 170px;
+	margin: 0 auto;
+	white-space: nowrap;
+	overflow: hidden;
+	font-family: 'Modern Sans', sans-serif;
+	animation: typing 1.5s steps(8),
+    blink .5s steps(1) infinite alternate;
+}
+
+@keyframes typing{
+	0% {width: 0;}
+  }
+
+.loading_img{
+	width:150px;
+}
+
+
+#img_animation{
+	animation: rotation 1.5s steps(7) infinite;
+  }
+
+@keyframes rotation{
+	0%{ transform:rotate(0);}
+	100%{ transform:rotate(360deg); }
+}
+
+
+/*メインページ*/
+#mainvisual {
+	height: 100vh;
+	background-image:url(../img/mainvisual.jpg);
+	background-size: cover;
+	background-color: rgba(97, 128, 178, 0.6);
+	background-blend-mode: soft-light;
+	background-attachment: fixed;  
+	position: relative;                                             
+}
+
+.site_title{
+	font-family: 'Modern Sans', sans-serif;
+	color: #fff;
+	font-size: 8em;
+	letter-spacing: 0.05em;
+}
+
+.mainvisual_wrap{
+	text-align: left;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	transform: translateY(-50%) translateX(-50%);
+
+}
+
+body{
+	background-color: #F5F5F5;
+	color: #707070;
+}
+
+h2{
+	font-size: 1.3em;
+}
+.section-title{
+	color:#6180B2;
+	font-size:5em;
+	font-family: lush, sans-serif;
+	font-weight: lighter;
+	margin-bottom: 60px;
+	margin-left: 15%;
+
+}
+
+.fadeIn{
+	animation-name:fadeInAnime;
+	animation-duration:1.5s;
+	animation-delay:4s;
+	animation-fill-mode:forwards;
+	opacity:0;
+	}
+	
+	@keyframes fadeInAnime{
+	  from {
+		opacity: 0;
+	  }
+	
+	  to {
+		opacity: 1;
+	  }
+	}
+
+.scrolldown1{
+	/*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	left:5%;
+	bottom:10px;
+	/*全体の高さ*/
+	height:100px;
+	top:180%;
+
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span{
+	/*描画位置*/
+	position: absolute;
+	left:-15px;
+	top: -30px;
+	/*テキストの形状*/
+	color: #eee;
+	font-size: 1rem;
+	letter-spacing: 0.05em;
+	font-family: 'Modern Sans', sans-serif;
+	animation-name:fadeInAnime;
+	animation-duration:1s;
+	animation-delay:5s;
+	animation-fill-mode:forwards;
+	opacity:0;
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+	content: "";
+	/*描画位置*/
+	position: absolute;
+	top: 0;
+	/*線の形状*/
+	width: 1.5px ;
+	height: 100px;
+	background: #eee;
+	/*線の動き1.4秒かけて動く。永遠にループ*/
+	animation: pathmove 1.4s ease-in-out infinite;
+	opacity:0;
+	animation-delay:5s;
+}
+
+
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+	0%{
+		height:0;
+		top:0;
+		opacity: 0;
+	}
+	30%{
+		height:30px;
+		opacity: 1;
+	}
+	100%{
+		height:0;
+		top:50px;
+		opacity: 0;
+	}
+}
+.section_jptitle{
+	display: block;
+	font-size: 0.25em;
+	line-height: 0.5;
+}
+
+.cut{
+	margin: 150px auto;
+	text-align: center;
+}
+
+.cut_img{
+	width: 12%;
+}
+
+.header {
+	text-align: center;
+	padding: 30px 0 20px;
+	background-color: #F5F5F5;
+
+}
+
+.gnav_pc{
+	margin: 0 auto;
+	width: 60%;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.gnav_pc li a{
+	text-decoration:none;
+	color:#707070;
+	font-family: 'Modern Sans', sans-serif;
+	font-size: 1.3em;
+}
+
+.gnav_pc li a {
+	padding-bottom: 5px;
+	position: relative;
+  }
+
+.gnav_pc li a::before {
+	background: #707070;
+	content: '';
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	transform-origin: center top;
+	transform: scale(0, 1);
+	transition: transform .3s;
+	}
+.gnav_pc li a:hover::before {
+	transform-origin: center top;
+	transform: scale(1, 1);
+	}
+   
+
+.gnav_sub{
+	font-size: 0.6em;
+}
+
+.gnav_sub{
+	display: block;
+}
+
+
+.m_fixed {
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+
+#service{
+	margin: 0 auto;
+	margin-top: 150px;
+	position: relative;
+}
+
+
+.servicecontent_wrap{
+	background-color: #fff;
+	display: flex;
+	width: 70%;
+	margin: 50px auto;
+}
+
+.square01{
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  width: 850px;
+  height: 450px;
+  background: #DBE6EF;
+  z-index: -2;
+  left: 0;
+}
+
+.service_img{
+	flex:1;
+	text-align: center;
+}
+
+.service_img img {
+	width: 35%;
+	margin: 20px;
+} 
+.service_content{
+	flex:2;
+	margin: 20px;
+}
+
+.service_detail{
+	margin-top: 10px;
+}
+
+.animate {
+	opacity: 0;
+	transform: translateY(10px);
+	transition: opacity 0.5s;
+  }
+.animate.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.animate.show:nth-of-type(1) {
+	transition-delay: 0s;
+}
+.animate.show:nth-of-type(2) {
+	transition-delay: 0.2s;
+}
+
+.animate.show:nth-of-type(3) {
+	transition-delay: 0.4s;
+}
+.animate.show:nth-of-type(4) {
+	transition-delay: 0.6s;
+}
+.animate.show:nth-of-type(5) {
+	transition-delay: 0.8s;
+}
+.animate.show:nth-of-type(6) {
+	transition-delay: 1.0s;
+}
+
+#work{
+	margin: 0 auto;
+	position: relative;
+}
+
+.square02{
+	position: absolute;
+	top: 60px;
+	bottom: 0;
+	width: 850px;
+	height: 450px;
+	background: #DBE6EF;
+	z-index: -1;
+	right: 0;
+  }
+
+.col_3{
+	display: flex;
+	gap:50px;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.col_3item{
+	justify-content: space-between;
+	margin-bottom: 50px;
+
+}
+
+.col_3item img{
+	width: 100%;
+}
+
+.view_button{
+	text-align: center;
+	margin-top: 30px;
+	position: relative;
+}
+
+.view_more_text{
+	text-decoration: none;
+	color:#6180B2;
+	background-color: #fff;
+	padding: 20px 60px;
+	border: solid #6180B2 2px;
+	font-family: 'Modern Sans', sans-serif;
+
+
+}
+
+  
+.view_button::after {
+	content: '';
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #6180B2;
+	border-right: solid 2px #6180B2;
+	position: absolute;
+	right: 45%;
+	top: 9px;
+  }
+
+.view_button::after {
+	transform: rotate(45deg);
+	}
+
+.view_more_text:hover{
+	background-color: #6180B2;
+	color: #fff;
+	transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.view_button:hover::after {
+	border-top: solid 2px #fff;
+	border-right: solid 2px #fff;
+	transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+  }
+
+
+.col_3item{
+	position: relative;
+	overflow: hidden;
+}
+
+.col_3item::before,
+.col_3item::after {
+content: "";
+display: block;
+position: absolute;
+margin: auto;
+top: 0;
+left: 0;
+margin: auto;
+transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+opacity: 0;
+}
+
+.col_3item::before {
+background: rgba(97,128,178,.7);
+width: 100%;
+height: 98%;
+}
+
+.col_3item::after {
+color: #fff;
+content: "View more info";
+font-family: 'Modern Sans', sans-serif;
+font-size: 20px;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+bottom: 0;
+right: 0;
+}
+
+.col_3item:hover::before,
+.col_3item:hover::after {
+opacity: 1;
+}
+
+#profile{
+	margin: 0 auto;
+}
+
+.profile_wrap{
+	display: flex;
+	gap: 100px;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.profile_img{
+	width: 30%;
+}
+.profile_img img{
+	width: 100%;
+	box-shadow:  10px 10px 0px #DBE6EF;
+}
+
+.profile_name{
+	margin-bottom: 50px;
+}
+
+footer {
+	background-color: #6180B2;
+	height: 60px;
+	margin-top: 150px;
+}
+
+footer p{
+	color:#fff;
+	text-align: center;
+	font-family: 'Modern Sans', sans-serif;
+	line-height: 60px;
+	font-size: 0.7em;
+}
+
+
+/*worksリストページ*/
+.spacer{
+	height: 100px;
+}
+
+.list-section-title{
+	color:#6180B2;
+	font-size:5em;
+	font-family: lush, sans-serif;
+	font-weight: lighter;
+	text-align: center;
+	margin-bottom:60px;
+}
+
+.back_button{
+	text-align: center;
+	margin-top: 30px;
+	position: relative;
+}
+
+.back_text{
+	text-decoration: none;
+	color:#6180B2;
+	background-color: #fff;
+	padding: 20px 60px;
+	border: solid #6180B2 2px;
+	font-family: 'Modern Sans', sans-serif;
+
+
+}
+
+.back_button::after {
+	content: '';
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #6180B2;
+	border-right: solid 2px #6180B2;
+	position: absolute;
+	right: 53%;
+	top: 9px
+  }
+
+.back_button::after {
+	transform: rotate(-135deg);
+	}
+
+.back_text:hover{
+	background-color: #6180B2;
+	color: #fff;
+	transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.back_button:hover::after {
+	border-top: solid 2px #fff;
+	border-right: solid 2px #fff;
+	transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+  }
+
+
+/*works個別ページ*/
+.workindv_wrap{
+	display: flex;
+	gap: 100px;
+	width: 70%;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
+.workindv_name{
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+.workindv_content{
+	flex:3;
+}
+
+.table_head{
+	width: 120px;
+}
+
+.tag_area{
+	display: flex;
+	margin-bottom: 40px;
+	gap:25px;
+}
+
+.web_tag{
+	color:#ffffff;
+	background-color: #6180B2;
+	padding: 3px 20px;
+	font-size: 14px;
+}
+
+.logo_tag{
+	color:#6180B2;
+	background-color: #DBE6EF;
+	padding: 3px 20px;
+	font-size: 14px;
+}
+
+
+.paper_tag{
+	color:#6180B2;
+	background-color: #ffffff;
+	padding: 3px 20px;
+	border: #6180B2 solid 1px;
+	font-size: 14px;
+}
+
+.self_tag{
+	color:#707070;
+	background-color: #ffffff;
+	padding: 3px 20px;
+	border: #707070 solid 1px;
+	font-size: 14px;
+}
+
+
+.workindv_img img{
+	width: 100%;
+}
+
+.workindv_column4{
+	display: flex;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.workindv_column4 img{
+	width:50%;
+}
+
+.workindv_img{
+	flex:2;
+}
+
+/*===============================================
+PC : 画面の横幅が769px以上
+=================================================*/
+
+.example {
+	font-size: 50px;
+	color: #99293D;
+}
+
+
+
+/*ここからメディアクエリで各デバイスサイズに書き分けます
+CSSは上から下に継承されるので、変化させたいところだけ書けばOK*/
+
+
+
+/*================================================
+Tablet : 画面の横幅が768pxまで
+==================================================*/
+@media screen and (max-width: 768px){
+	.example {
+		font-size: 30px;
+		color: #2D81B1;
+	}
+}
+
+
+/*================================================
+Smartphone :  画面の横幅が640pxまで
+=================================================*/
+@media screen and (max-width:640px){
+	.example {
+		font-size: 20px;
+		color: #AD8651;
+	}
+}
