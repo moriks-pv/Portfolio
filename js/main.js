@@ -26,7 +26,7 @@ setTimeout(function(){
 //グローバルナビゲーション固定
 var navPos = jQuery( '#global-nav' ).offset().top; // グローバルメニューの位置
 var navHeight = jQuery( '#global-nav' ).outerHeight(); // グローバルメニューの高さ
-jQuery( window ).on( 'scroll', function() {
+jQuery( window ).on( 'scroll', function(){if ($(window).width() > 640) {
     if ( jQuery( this ).scrollTop() > navPos ) {
         jQuery( 'body' ).css( 'padding-top', navHeight );
         jQuery( '#global-nav' ).addClass( 'm_fixed' );
@@ -34,7 +34,7 @@ jQuery( window ).on( 'scroll', function() {
         jQuery( 'body' ).css( 'padding-top', 0 );
         jQuery( '#global-nav' ).removeClass( 'm_fixed' );
     }
-});
+}});
 
 //スクロールフェードイン
 $(function() {
@@ -52,3 +52,16 @@ $(function() {
   });
 
 
+ /* $(".openbtn").click(function () {
+    $(this).toggleClass('active');
+});*/
+
+$(".openbtn").click(function () {//ボタンがクリックされたら
+  $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+    $("#gnav_sp").toggleClass('panelactive');//ナビゲーションにpanelactiveクラスを付与
+});
+
+$("#gnav_sp a").click(function () {//ナビゲーションのリンクがクリックされたら
+    $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
+    $("#gnav_sp").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
+});

@@ -655,6 +655,13 @@ footer p{
 	flex:2;
 }
 
+.openbtn{
+	display: none;
+}
+
+#gnav_sp{
+	display: none;
+}
 /*===============================================
 PC : 画面の横幅が769px以上
 =================================================*/
@@ -686,8 +693,199 @@ Tablet : 画面の横幅が768pxまで
 Smartphone :  画面の横幅が640pxまで
 =================================================*/
 @media screen and (max-width:640px){
-	.example {
-		font-size: 20px;
-		color: #AD8651;
+	.gnav_pc{
+		display: none;
 	}
+
+	.header{
+		text-align: left;
+		position: fixed;
+		top: 0;
+		background-color: #6180B2;
+		padding: initial;
+		z-index: 3;
+	}
+
+	.openbtn{
+		display: inline-block;
+		position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+		width: 50px;
+		height:50px;
+		cursor: pointer;
+	  }
+		
+
+	.openbtn span{
+		display: inline-block;
+		transition: all .4s;/*アニメーションの設定*/
+		position: absolute;
+		left: 13px;
+		height: 2px;
+	    background-color: #fff;
+	  }
+	
+	
+	.openbtn span:nth-of-type(1) {
+	  top:22px; 
+		width: 50%;
+	}
+	
+	.openbtn span:nth-of-type(2) {
+	  top:29px;
+		width:30%;
+	}
+	
+	/*activeクラスが付与されると線が回転して×に*/
+	
+	.openbtn.active span:nth-of-type(1) {
+		top: 20px;
+		left: 16px;
+		transform: translateY(6px) rotate(-45deg);
+		width: 35%;
+	}
+	
+	.openbtn.active span:nth-of-type(2) {
+		top: 32px;
+		left: 16px;
+		transform: translateY(-6px) rotate(45deg);
+		width: 35%;
+	}
+
+	#gnav_sp{
+		display: initial;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		background-color: #6180B2;
+		z-index: 2;
+		text-align: center;
+		left: -120%;
+		transition: all 0.5s;
+
+	}
+
+	.gnav_sp_list{
+		margin: 70% auto;
+	}
+
+	.gnav_sp_list li{
+		margin-bottom: 40px;
+	}
+
+	#gnav_sp li a{
+		text-decoration:none;
+		color:#fff;
+		font-family: 'Modern Sans', sans-serif;
+		font-size: 1.3em;
+	}
+	
+	#gnav_sp li a {
+		padding-bottom: 5px;
+		position: relative;
+	  }
+
+
+	#gnav_sp.panelactive{
+		left: 0;
+	}
+	
+	
+
+	   
+
+	.mainvisual_wrap {
+		text-align: center;
+		font-size: 5em;
+		transform: initial;
+		left: initial;
+		top: 30%;
+	}
+
+	.site_title{
+		font-size: 1em;
+	}
+
+	.scrolldown1{
+		left: 50%;
+	}
+
+	.scrolldown1::after{
+		transform: translateX(8px);
+	}
+
+	.servicecontent_wrap{
+		display: block;
+		padding: 20px 0;
+	}
+
+	.cut_img{
+		width: 40%;
+	}
+
+	.cut{
+		margin: 100px auto;
+	}
+
+	.col_3{
+		display: block;
+	}
+
+	.view_button::after{
+		right: 30%;
+	}
+
+	.profile_wrap{
+		display: block;
+	}
+
+	.profile_img{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+	.square01{
+		left: 30px;
+	}
+
+	.square02{
+		right: 30px;
+	}
+
+	.back_button::after{
+		right: 60%;
+	}
+
+	.workindv_wrap{
+		display: block;
+		width: 80%;
+	}
+
+	.workindv_img img{
+		margin-bottom: 50px;
+	}
+
+	.web_tag{
+		padding: 3px 5px;
+		font-size: 14px;
+	}
+	
+	.logo_tag{
+		padding: 3px 5px;
+		font-size: 14px;
+	}
+	
+	
+	.paper_tag{
+		padding: 3px 5px;
+		font-size: 14px;
+	}
+	
+	.self_tag{
+		padding: 3px 5px;
+		font-size: 14px;
+	}
+	
+
 }
+
