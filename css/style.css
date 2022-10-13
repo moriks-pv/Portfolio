@@ -662,6 +662,10 @@ footer p{
 #gnav_sp{
 	display: none;
 }
+
+.square_sp{
+	display: none;
+}
 /*===============================================
 PC : 画面の横幅が769px以上
 =================================================*/
@@ -766,7 +770,7 @@ Smartphone :  画面の横幅が640pxまで
 	}
 
 	.gnav_sp_list{
-		margin: 70% auto;
+		margin: 50% auto;
 	}
 
 	.gnav_sp_list li{
@@ -799,7 +803,7 @@ Smartphone :  画面の横幅が640pxまで
 		font-size: 5em;
 		transform: initial;
 		left: initial;
-		top: 30%;
+		top: 15%;
 	}
 
 	.site_title{
@@ -844,10 +848,24 @@ Smartphone :  画面の横幅が640pxまで
 		margin-bottom: 40px;
 	}
 
+	
+
 	.square01{
-		left: 30px;
-		width:100vw;
+		position: absolute;
+		width: 100vw;
 	}
+
+	.square_sp{
+		display:initial;
+		position: absolute;
+		top: 60px;
+		bottom: 0;
+		width: 30px;
+		height: 450px;
+		background: #F5F5F5;
+		z-index: -2;
+		left: 0;
+	  }
 
 	.square02{
 		right: 30px;
