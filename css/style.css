@@ -846,6 +846,7 @@ Smartphone :  画面の横幅が640pxまで
 
 	.square01{
 		left: 30px;
+		width:100vw;
 	}
 
 	.square02{
