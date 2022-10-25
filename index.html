@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+  <head prefix="og: https://ogp.me/ns#">
     <!-- 文字コード！-->
     <meta charset="UTF-8">
 
   	<!-- ブラウザで表示されるタイトル !-->
     <title>multi-design Portfolio</title>
+    <meta name="description" content="全てのデザインに言葉を与える。Webサイトを始めとしたマルチデザイン制作実績のポートフォリオサイトです。">
+    <link rel="icon" href="https://moriks-portfolio.com/img/favicon.ico">
+
+    <!-- OGP設定!-->
+    <meta property="og:url" content="https://moriks-portfolio.com/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="multi-design Portfolio"/>
+    <meta property="og:description" content="全てのデザインに言葉を与える。Webサイトを始めとしたマルチデザイン制作実績のポートフォリオサイトです。"/>
+    <meta property="og:site_name" content="multi-design Portfolio"/>
+    <meta property="og:image" content="https://moriks-portfolio.com/img/ogp_img.png"/>
+
+    
+
+
 
     <!-- スタイルシート -->
     <link href="css/reset.min.css" rel="stylesheet" type="text/css">
@@ -25,7 +39,7 @@
         h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
     </script>
-    <link href="http://fonts.cdnfonts.com/css/modern-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/modern-sans" rel="stylesheet">
   </head>
 
   <body id="scroll" class="scroll_lock">
@@ -35,21 +49,24 @@
           <p class="loading-txt">Loading…</p>
         </div>
         <div id="img_animation">
-          <img class="loading_img" src="img/loading.png">
+          <img class="loading_img" src="img/loading.png" alt="ローディングイメージ">
         </div>
       </div>
     </div>
+  
+    
+
 
     <section id="mainvisual">
       <div class="mainvisual_wrap">
           <!-- ベースにするsvgタグを入れる。記述の一部を後程解説する自作のsvgタグと差し替えます。-->
-          <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="567.05" height="201.74" viewBox="0 0 567.05 201.74" style="enable-background:new 0 0 567.05 201.74;" xml:space="preserve">
-          <image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svg/text.svg" width="567.05" height="201.74" mask="url(#clipmask)"></image>
+          <svg id="mask" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" width="567.05" height="201.74" viewBox="0 0 567.05 201.74" style="enable-background:new 0 0 567.05 201.74;" xml:space="preserve">
+          <image xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="svg/text.svg" width="567.05" height="201.74" mask="url(#clipmask)"></image>
           <mask id="clipmask" maskUnits="objectBoundingBox">
             <path class="st0" d="M12.05,90.32s-18,15-10,42c0,0,25-61,34-44,0,0-11,38-10,41,0,0,27-57,36-44s-31,52-11,44l26-27s10-21,13-17c0,0-23,52-9,39l14-13,18-19s-23,46-10,36S227.05,18.32,194.05,1.32s-75,136-56,125,37-26,37-26l18-44s-37,76-19,68,35-36,35-36c0,0-16,46-5,37s26-26,26-26l-15-30-10,6s-27,3-35,0,75,13,75,13c0,0,33,9,45,1s40-4,40-4c0,0-45,12-30,40S418.05-7.68,384.05,4.32s-81,141-48,120,74-38,52-41-38,57-12,43,31-27,31-27c0,0-12.11,8.18-19.1,20.05-5.23,8.88-7.6,19.82,.1,30.95l3-30s32-29,33-39c0,0-8,17-5,22l3,5s-21,32-26,14c0,0,34,8,55-32,0,0-19,49,0,31s56-52,55-36c0,0-51,14-35,41l31-33s-41,131-64,105l86-107s-16,20-11,39c0,0,35-67,36-42,0,0-26,57-13,43s31-33,31-33l-111-29"/>
           </mask> 
           </svg><!--ベースにするタグここまで-->
-        <p class="site_title fadeIn">Portfolio</p>
+        <h1 class="site_title fadeIn">Portfolio</h1>
         <div class="scrolldown1 late-open"><span>Scroll</span></div>
       </div>
     </section>
@@ -72,76 +89,117 @@
       </ul>
     </div>
 
+    <sectiion id="message">
+      <div class="animate">
+      <p class="eng_message">Every design tells a Story</p>
+      <p class="main_message">すべてのデザインに<span>物語</span>を</p>
+      </div>
+      <div class="animate">
+      <p class="sub_message"><span class="sub_message_br">世界中のあらゆるデザインにはメッセージが込められています。</span><span class="sub_message_br"></span>デザインを構成する全ての要素に言葉を与えることで</span><span class="sub_message_br">想いや世界観が伝わるような制作を心がけています</span></p>
+      </div>
+    </sectiion>
+
 
     <section id="service">
-      <h1 class="section-title">Service<span class="section_jptitle">サービス内容</span></h1>
+      <h2 class="section-title">Service<span class="section_jptitle">サービス内容</span></h2>
       <div class="square01"></div>
       <div class="square_sp"></div>
       <div class="servicecontent_wrap animate">
         <div class="service_img">
-          <img src="img/design.png">
+          <img src="img/design.png" alt="デザインアイコン">
         </div>
         <div class="service_content">
-          <h2 class="service_title">デザイン</h2>
+          <h3 class="service_title">デザイン</h3>
           <p class="service_detail">
-            静的Webサイト・各種広告用バナーなどのWebコンテンツ、<br>名刺・チラシなどの紙媒体に加え
-            ホワイトペーパー・パワーポイントなどのビジネスドキュメントなどが制作可能です<br>
-            (仮テキスト：そのうちちゃんと書く)
+            静的Webサイト・各種広告用バナー・SNSクリエイティブ等のWebコンテンツ、名刺・チラシなどの紙媒体に加え
+            ホワイトペーパー・パワーポイントなどのビジネスドキュメントのデザインも制作可能です。また各種Webサービス、アプリケーションなどの
+            UIデザイン制作などもお気軽にご相談ください。
           </p> 
         </div>
       </div>
       <div class="servicecontent_wrap animate">
         <div class="service_img">
-          <img src="img/coding.png">
+          <img src="img/coding.png" alt="PCアイコン">
         </div>
         <div class="service_content">
-          <h2 class="service_title">コーディング</h2>
+          <h3 class="service_title">コーディング</h3>
           <p class="service_detail">
-            HTML、CSS、Javascriptで構成されるWebページの制作、<br>
-            Wordpressを用いたサイトの制作が可能です<br>
-            (仮テキスト：ここはそのうちちゃんと書く)
+            HTML、CSS、Javascriptで構成されるWebページの制作はもちろん、既存Webサイトの修正・更新も対応可能です。またWordpress・Google site等CMSツールを用いたサイトの制作も承ります。<br>
           </p>
         </div>
       </div>
     </section>
+
+    <section id="tools">
+      <div class="tools_text_wrap">
+        <p><span>使用するツールについて</span><br>
+        制作するコンテンツの種類や用途、作業段階に合わせて主に以下のツールを使用しながら制作を進めます。</p>
+      </div>
+      <div class="col_4">
+        <div class="tool_wrap animate">
+          <p class="tool_eng">Wireframe</p>
+          <p class="tool_jp">ワイヤフレームの作成</p>
+          <div class="line"></div>
+          <p class="tool_name">Adobe XD<br>Figma</p>
+        </div>
+        <div class="tool_wrap animate">
+          <p class="tool_eng">Design</p>
+          <p class="tool_jp">デザインの作成・編集</p>
+          <div class="line"></div>
+          <p class="tool_name">Adobe Photoshop<br>Adobe Illustrator<br>Adobe Lightroom<br>Canva</p>
+        </div>
+        <div class="tool_wrap animate">
+          <p class="tool_eng">Animation</p>
+          <p class="tool_jp">アニメーション・動画の作成</p>
+          <div class="line"></div>
+          <p class="tool_name">Adobe Premiere Pro<br>Adobe After Effects</p>
+        </div>
+        <div class="tool_wrap animate">
+          <p class="tool_eng">Coding</p>
+          <p class="tool_jp">コーディング・Web制作</p>
+          <div class="line"></div>
+          <p class="tool_name">Visual Studio Code<br>Github<br>Wordpress<br>GoogleSites</p>
+        </div>
+      </div>
+    </section>
     <div class="cut">
-      <img class="cut_img" src="img/flower_section.png">
+      <img class="cut_img" src="img/flower_section.png" alt="区切りイメージ">
     </div>
 
     <section id="work">
-      <h1 class="section-title">Works<span class="section_jptitle">制作実績</span></h1>
+      <h2 class="section-title">Works<span class="section_jptitle">制作実績</span></h2>
       <div class="square02"></div>
       <div class="col_3">
         <a class="animate" href="works_indv/work01.html" target="_blank" rel="noopener noreferrer">
           <div class="col_3item">
-            <img src="works_list/work01.png">
+            <img src="works_list/work01.png" alt="作品①">
           </div>
         </a>
         <a class="animate" href="works_indv/work02.html" target="_blank" rel="noopener noreferrer">
           <div class="col_3item">
-            <img src="works_list/work02.png">
+            <img src="works_list/work02.png" alt="作品②">
           </div>
         </a>
         <a class="animate" href="works_indv/work03.html" target="_blank" rel="noopener noreferrer">
           <div class="col_3item">
-            <img src="works_list/work03.png">
+            <img src="works_list/work03.png" alt="作品③">
           </div>
         </a>
       </div>
       <div class="col_3">
         <a class="animate" href="works_indv/work04.html" target="_blank" rel="noopener noreferrer">
           <div class="col_3item">
-            <img src="works_list/work04.png">
+            <img src="works_list/work04.png" alt="作品④">
           </div>
         </a>
         <a class="animate" href="works_indv/work05.html" target="_blank" rel="noopener noreferrer">
           <div class="col_3item">
-            <img src="works_list/work05.png">
+            <img src="works_list/work05.png" alt="作品⑤">
           </div>
         </a>
         <a class="animate" href="works_indv/work06.html" target="_blank" rel="noopener noreferrer">
           <div class="col_3item">
-            <img src="works_list/work06.png">
+            <img src="works_list/work06.png" alt="作品⑥">
           </div>
         </a>
       </div>
@@ -151,21 +209,23 @@
     </section>
 
     <div class="cut">
-      <img class="cut_img" src="img/flower_section.png">
+      <img class="cut_img" src="img/flower_section.png" alt="区切りイメージ">
     </div>
 
     <section id="profile">
-      <h1 class="section-title">Profile<span class="section_jptitle">プロフィール</span></h1>
+      <h2 class="section-title">Profile<span class="section_jptitle">プロフィール</span></h2>
       <div class="profile_wrap">
         <div class="profile_img">
-          <img src="img/tentative_profile.jpg">
+          <img src="img/prof_img.png" alt="プロフィール画像">
         </div>
         <div class="profile_content">
           <h3 class="profile_name">Misa Orikasa</h3>
           <p class="profile_details">
-            2017年住友商事に新卒入社、資源部門にて非鉄金属のトレード業務に従事したのち
-            2022年2月に株式会社Doooxへ入社<br>
-            (仮テキスト：そのうちちゃんと書く)
+            2017年4月に住友商事株式会社へ新卒入社、資源部門にて非鉄金属の国内外輸出入に係る業務に従事。
+            2022年1月に同社を退職後、同年2月に株式会社Doooxへ入社し、
+            同時期にWebコンテンツを中心としたデザインおよびコーディングの学習をはじめました。<br>現在個人でWebサイト・バナー・チラシ等の制作を行う傍ら、
+            所属企業においてもWebサイトや各種広告関係クリエイティブ、各種資料デザインの制作・更新を担当しています。<br>
+            またPython,PHPなどのプログラミング言語や動画編集・モーショングラフィックスについて並行して学習中。
           </p>
         </div>
       </div>
